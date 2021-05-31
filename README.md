@@ -1,11 +1,23 @@
-# Start your own "Can of Books" App
+Can Of Books
+Author: Mahmoud Saadeh & Alaa Abu Issa Version: 1.0.0
 
-This repository has starter code to begin work on creating your own online bookshelf.
+Overview
+For now this app is about displaying some books when the user login with his account.
 
-## What can books do?
+Getting Started
+install these libraries: - React - @auth0/auth0-react - bootstrap - react-bootstrap - react-cookie - react-cookies
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+Architecture
+used bootstrap for styling
 
-## Use this template
+Change Log
+30-05-2021 4:00pm - Application now has Login feature. 31-05-2021 5:00pm - Application now able to store data in mongodb.
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+Credit and Collaborations
+Mahmoud Saadeh & Alaa Abu Issa
+
+Name of feature: Login
+
+Estimate of time needed to complete: 1 hour
+
+Actual time needed to complete: 1 hour
