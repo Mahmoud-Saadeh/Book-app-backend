@@ -59,24 +59,24 @@ function createUser() {
     email: 'alaaabuissa95@gmail.com',
     books: [
       {
-        bookName: 'Static',
-        describtion: 'talk about designing structural concrete',
-        image:
-          'https://images-na.ssl-images-amazon.com/images/I/81Wj1JQ+mKL.jpg',
+        bookName: 'MongoDB Basics',
+        describtion: 'MongoDB Basics, from The Definitive Guide to MongoDB, 2E, shows you how a document-oriented database system differs from a relational database, and how to install and get started using it. You will also learn MongoDB design basics, including geospatial indexing, how to navigate, view, and query your database, and how to use GridFS with a bit of Python.',
+        image: 'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4842/9781484208960.jpg',
       },
       {
-        bookName: 'Crime and Punishment2',
+        bookName: 'HTML and CSS : Design and Build Websites'
+        ,
         describtion:
-          'Crime and Punishment focuses on the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who formulates a plan to kill an unscrupulous pawnbroker for her money.',
+          'A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! Every day, more and more people want to learn some HTML and CSS.',
         image:
-          'https://kbimages1-a.akamaihd.net/b1c96137-0ddf-4ee4-8f46-73bdfa9b8621/1200/1200/False/crime-and-punishment-by-fyodor-dostoevsky-1.jpg',
+          'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1180/9781118008188.jpg',
       },
       {
-        bookName: 'Demons',
+        bookName: 'JavaScript and JQuery : Interactive Front-End Web Development',
         describtion:
-          'Demons is an allegory of the potentially catastrophic consequences of the political and moral nihilism that were becoming prevalent in Russia in the 1860s. A fictional town descends into chaos as it becomes the focal point of an attempted revolution, orchestrated by master conspirator Pyotr Verkhovensky.',
+          'Learn JavaScript and jQuery a nicer way This full-color book adopts a visual approach to teaching JavaScript & jQuery, showing you how to make web pages more interactive and interfaces more intuitive through the use of inspiring code examples, infographics, and photography..',
         image:
-          'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1524586008l/5695.jpg',
+          'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1185/9781118531648.jpg',
       },
     ],
   });
