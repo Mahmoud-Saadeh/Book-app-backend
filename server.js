@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/test', {
   useNewUrlParser: true,
@@ -96,5 +97,26 @@ app.get('/books', (req, res) => {
     }
   });
 });
+
+app.post('/books', postBook);
+
+function postBook(req, res) {
+  const { bookName, describtion, image, email } = req.body;
+
+  User.find({ email: email }, (err, data) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send(err.message);
+    } else {
+      data[0].books.push({
+        bookName,
+        describtion,
+        image,
+      });
+      data[0].save();
+      res.status(201).send(data[0].books);
+    }
+  });
+}
 
 app.listen(PORT, () => console.log(`listening on hi ${PORT}`));
