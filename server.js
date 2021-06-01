@@ -119,4 +119,27 @@ function postBook(req, res) {
   });
 }
 
-app.listen(PORT, () => console.log(`listening on hi ${PORT}`));
+app.delete('/books/:id', deletBook);
+
+function deletBook(req, res) {
+  const { email } = req.query;
+  const id = req.params.id;
+  // console.log(index);
+  // console.log(email);
+
+  User.find({ email: email }, (err, data) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send(err.message);
+    } else {
+      const newBookStore = data[0].books.filter((book, index) => {
+        return id != index;
+      });
+      data[0].books = newBookStore;
+      data[0].save();
+      res.status(201).send(data[0].books);
+    }
+  });
+}
+
+app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
