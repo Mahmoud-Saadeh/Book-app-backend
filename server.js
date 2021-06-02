@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/test', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -136,6 +136,30 @@ function deletBook(req, res) {
         return id != index;
       });
       data[0].books = newBookStore;
+      data[0].save();
+      res.status(201).send(data[0].books);
+    }
+  });
+}
+
+app.put('/books/:id', updateBook);
+
+function updateBook(req, res) {
+  const { bookName, describtion, image, email } = req.body;
+  const id = req.params.id;
+  // console.log(index);
+  // console.log(email);
+
+  User.find({ email: email }, (err, data) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send(err.message);
+    } else {
+      data[0].books.splice(id, 1, {
+        bookName,
+        describtion,
+        image,
+      });
       data[0].save();
       res.status(201).send(data[0].books);
     }

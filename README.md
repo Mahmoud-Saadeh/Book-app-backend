@@ -1,7 +1,7 @@
 # Can of Books
 
 **Author**: Mahmoud Saadeh & Alaa Abu Issa
-**Version**: 1.0.0
+**Version**: 2.0.0
 
 ## Overview
 
@@ -37,3 +37,19 @@ Name of feature: MongoDB
 Estimate of time needed to complete: 2 hours
 
 Actual time needed to complete: 2.5 hours
+
+---
+
+Name of feature: Add & Delete a Book
+
+Estimate of time needed to complete: 2.5 hours
+
+Actual time needed to complete: 3 hours
+
+---
+
+Name of feature: update a Book
+
+Estimate of time needed to complete: 1 hour
+
+Actual time needed to complete: 1 hour
