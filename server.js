@@ -142,4 +142,28 @@ function deletBook(req, res) {
   });
 }
 
+app.put('/books/:id', updateBook);
+
+function updateBook(req, res) {
+  const { bookName, describtion, image, email } = req.body;
+  const id = req.params.id;
+  // console.log(index);
+  // console.log(email);
+
+  User.find({ email: email }, (err, data) => {
+    if (err) {
+      console.log(err.message);
+      res.status(500).send(err.message);
+    } else {
+      data[0].books.splice(id, 1, {
+        bookName,
+        describtion,
+        image,
+      });
+      data[0].save();
+      res.status(201).send(data[0].books);
+    }
+  });
+}
+
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
